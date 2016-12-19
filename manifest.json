@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Task Issue Count",
+  "description": "Internal Extension to maintain count of issue in a given activity.",
+ "version": "0.1.1",
+  
+   "browser_action": {
+	 
+    "default_popup": "popup/index.html",
+    "default_title": "Task Issue Count"
+	},
+ "permissions": [
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+       "https://*/*"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}
+
+
