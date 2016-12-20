@@ -5,5 +5,5 @@ A Simple Extension used to count Redmine issue for particular task.( Made for In
 To use this extension .
 * Clone this repository.
 * Enable developer mode in chrome extension.
-* Add  folder to chrome extension by clicking "Load unpached extension". 
+* Add  folder to chrome extension by clicking "Load unpacked extension". 
 
