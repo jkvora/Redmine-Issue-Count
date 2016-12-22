@@ -59,6 +59,7 @@ chrome.tabs.query({ active: true, lastFocusedWindow: true }, function(tabs) {
                         if(UserList[i]!=null && UserList[i]!="")
                         {
                             var elm="";
+                            var iCount = 0;
                             for(var j=0;j<Object.keys(issues_type).length;j++)
                             {
                                 var chk=ans[UserList[i]][Object.keys(issues_type)[j]];
@@ -66,10 +67,12 @@ chrome.tabs.query({ active: true, lastFocusedWindow: true }, function(tabs) {
                                 {
                                     if(elm==""){ elm='<ul class=\"item\"><li>'+UserList[i]+'</li>';}
                                      elm+='<div>'+Object.keys(issues_type)[j]+ " - " + chk +'</div>';
+                                 iCount += chk;
                                 }
                                 
                             }
                             elm+='</ul>'
+                            if(iCount>0){ elm = elm.replace(":</li>",": "+iCount+"</li>" ) }
                             cl.append(elm);
                         }
                     }
